@@ -1,0 +1,46 @@
+# 踩蘑菇每天6点影响力
+
+## 配置方式
+1.  fork仓库
+
+2. 配置三个仓库参数
+   - `OWNER_REPO` 用户名/仓库名
+   - `CAI_MO_GU_TOKEN` 踩蘑菇的Token cmg_token
+   - `MY_GITHUB_API_TOKEN` githubapiToken 需要读写权限
+
+3. 删除文件
+   - run.txt     (记录上一次运行时间)
+   - acIds.txt   (记录已经评价的游戏)
+   - postIds.txt (记录已经评论的帖子)
+
+## 更新
+
+- 2025.12.10
+  - 帖子回复
+- 2025.12.12
+  - cmgToken问题修复(10-12号之间fork的需要重新修改)
+  - 个人主页问题修复
+  - 触发器恢复
+
+## 踩蘑菇接口(以下是该项目用到的所有接口和html)
+
+- https://www.caimogu.cc/game/find.html?act=fetch&date=2024-07&sort=1&sort_desc=1&page=1
+  - 游戏库列表
+  
+- https://www.caimogu.cc/game/act/score
+  - 游戏评分
+  
+- https://www.caimogu.cc/user/my.html
+  - 个人主页
+  
+- https://www.caimogu.cc/user/act/my_list?act=reply&page=3
+  - 个人主页回复列表
+  
+- https://www.caimogu.cc/circle/act/post_list?id=449&kwType=post&kw=&type=all&topic=&tags=&page=1
+  - 莫个圈子中帖子列表
+  
+- https://www.caimogu.cc/post/comments?id=2264113&pid=0&order=default&page=1
+  - 帖子中评论列表
+  
+- https://www.caimogu.cc/post/act/comment
+  - 评论帖子
